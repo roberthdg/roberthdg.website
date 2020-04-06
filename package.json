@@ -8,18 +8,32 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "gatsby build && gatsby serve",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@material-ui/core": "^4.9.7",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.47",
+    "fg-loadcss": "^2.1.0",
     "gatsby": "^2.20.12",
+    "gatsby-plugin-material-ui": "^2.1.6",
+    "gatsby-plugin-react-helmet": "^3.2.1",
+    "gatsby-plugin-styled-components": "^3.2.1",
+    "gatsby-plugin-styled-jsx": "^3.2.1",
+    "gatsby-theme-material-ui": "^1.0.8",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-particles-js": "^2.7.1",
+    "styled-jsx": "^3.2.5",
+    "styled-components": "^5.0.1"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "babel-plugin-styled-components": "^1.10.7"
   },
   "repository": {
     "type": "git",
