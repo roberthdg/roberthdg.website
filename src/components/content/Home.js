@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import { loadCSS } from 'fg-loadcss';
 import Typography from '@material-ui/core/Typography';
 import Icon from '@material-ui/core/Icon';

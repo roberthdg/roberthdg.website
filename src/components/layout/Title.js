@@ -13,6 +13,7 @@ const Title = props => {
         font-family: 'Nunito', sans-serif; !important;
         margin: 0 0 40px 0 !important;
         position: relative;
+        font-size: 35px;
         padding-bottom: 15px;
         text-transform: uppercase;
       }
