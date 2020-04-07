@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import { loadCSS } from 'fg-loadcss';
 import Typography from '@material-ui/core/Typography';
 import Icon from '@material-ui/core/Icon';
@@ -23,28 +23,26 @@ const Content = () => {
       'https://use.fontawesome.com/releases/v5.12.0/css/all.css',
       document.querySelector('#font-awesome-css'),
     );
-  }, []);
+  }, []);  
 
   return(
   <div className='home'>
     <div className='particles'>
       <Particles params={particlesParams}/>
     </div> 
-   
-    <Typography variant='h3' style={{ fontFamily: "'Nunito', sans-serif", fontWeight: '700'}}>
-      Hi, I am <span style={{color:'rgb(3,127,255)'}}>Roberth Gómez</span>
-    </Typography>
-
-    <Typography variant='h6' style={{color:'rgb(142,149,171)', fontFamily: "'Nunito', sans-serif", fontWeight: '600', marginBottom: '20px'}}>
-      Full-Stack Developer <br/>  React / Node.js / MongoDB  
-    </Typography>
-
-    <Link href="/contact"><a><Icon className="fa fa-2x fa-envelope"/></a></Link>
-    <Link><a target="_blank" href="https://github.com/roberthdg"><Icon className="fab fa-2x fa-github"/></a></Link>
-    <Link><a target="_blank" href="https://www.linkedin.com/in/roberthdg/"><Icon className="fab fa-2x fa-linkedin"/></a></Link>
-    
-    
-    
+    <div className='title'>
+      <Typography variant='h3' style={{ fontFamily: "'Nunito', sans-serif", fontWeight: '700'}}>
+        Hi, I am <span style={{color:'rgb(3,127,255)'}}>Roberth Gómez<span className='blinking'>_</span></span> 
+      </Typography>
+      
+      <Typography variant='h6' style={{color:'rgb(142,149,171)', fontFamily: "'Nunito', sans-serif", fontWeight: '600', marginBottom: '20px'}}>
+        Full-Stack Developer <br/>  React / Node.js / MongoDB  
+      </Typography>
+      
+      <Link href="/contact"><a><Icon className="fa fa-2x fa-envelope"/></a></Link>
+      <Link><a target="_blank" href="https://github.com/roberthdg"><Icon className="fab fa-2x fa-github"/></a></Link>
+      <Link><a target="_blank" href="https://www.linkedin.com/in/roberthdg/"><Icon className="fab fa-2x fa-linkedin"/></a></Link>    
+    </div>
 
     <style jsx>{`
     .home {
@@ -67,23 +65,32 @@ const Content = () => {
       cursor: pointer;
     }
 
-    .console-underscore {
-      display:inline-block;
-     position:relative;
-     top:-0.14em;
-     left:10px;
-   }
-
    .particles {
     position: absolute;
     z-index: -1;
    }
 
+   .blinking{
+    animation:blinkingText 1.2s infinite;
+    }
+    @keyframes blinkingText{
+        0%{     color: rgb(3,127,255); }
+        49%{    color: rgb(3,127,255); }
+        60%{    color: transparent; }
+        99%{    color: transparent;  }
+        100%{   color: rgb(3,127,255); }
+    }
+
     @media screen and (min-width: 1142px) {
       .particles {
-        width: 195vh;
+        width: 198.6vh;
         right:0;
         top:0;
+      }
+
+      .title {
+        margin-top: 7vh;
+        margin-left: 2vw;
       }
     }
 
@@ -98,6 +105,10 @@ const Content = () => {
         width: 190vw;
         margin-left: -55vw;
         margin-top: 0vw;
+      }
+
+      .blinking {
+        display: none;
       }
    }
     `}</style>

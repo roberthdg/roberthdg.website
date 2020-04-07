@@ -1,9 +1,13 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import Typography from '@material-ui/core/Typography';
+import { Helmet } from "react-helmet";
 
 const Content = () => (
     <>
+    <Helmet>
+      <title>Roberth Gómez | Page not found</title>
+    </Helmet>
     <Layout>
         <div className='notFound'>
             <Typography variant='h3' style={{ fontFamily: "'Nunito', sans-serif", fontWeight: '700'}}>

@@ -35,7 +35,7 @@ const Content = () => {
         <Grid item xs={10}> 
           <div className='info'> 
             <Grid container>
-              <Grid item xs={3} lg={2} style={{marginRight:'10%'}}>
+              <Grid item xs={3}  lg={2} style={{marginRight:'10%'}}>
                 <div className='iconGrid'>
                  <MailIcon style={{fontSize:'45px'}}/>
                 </div>
@@ -49,7 +49,6 @@ const Content = () => {
             </Grid>
           </div> 
         </Grid >  
-
       </Grid>
     </Grid>
 

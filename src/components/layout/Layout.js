@@ -51,7 +51,6 @@ function Layout(props) {
   <>
     <Helmet>
       <meta charSet="utf-8" />
-      <title>My Title</title>
       <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800&display=swap" rel="stylesheet"></link>
     </Helmet>
     <div className={classes.root}>
