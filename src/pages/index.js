@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 const Index = () => (
     <>
     <Helmet>
-      <title>Roberth Gómez | Home</title>
+      <title>Roberth Gómez | Full-Stack Developer</title>
     </Helmet>
     <Layout>
         <Home/>

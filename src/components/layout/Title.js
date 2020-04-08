@@ -40,7 +40,7 @@ const Title = props => {
       span {
         color: rgb(20,23,34);
         position: absolute;
-        font-size: 58px;
+        font-size: 50px;
         font-weight: 800;
         margin-top: 30px;
         z-index: -12;

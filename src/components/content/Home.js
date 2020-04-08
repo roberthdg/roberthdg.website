@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Icon from '@material-ui/core/Icon';
 import Particles from 'react-particles-js';
 import Link from '@material-ui/core/Link';
+import { Link as GastbyLink } from 'gatsby'
 
 const particlesParams={
   particles: {
@@ -35,12 +36,12 @@ const Content = () => {
         Hi, I am <span style={{color:'rgb(3,127,255)'}}>Roberth Gómez<span className='blinking'>_</span></span> 
       </Typography>
       
-      <Typography variant='h6' style={{color:'rgb(142,149,171)', fontFamily: "'Nunito', sans-serif", fontWeight: '600', marginBottom: '20px'}}>
+      <Typography variant='h6' style={{color:'rgb(142,149,171)', fontFamily: "'Nunito', sans-serif", fontWeight: '600', marginBottom: '17px'}}>
         Full-Stack Developer <br/>  React / Node.js / MongoDB  
       </Typography>
       
-      <Link href="/contact"><a><Icon className="fa fa-2x fa-envelope"/></a></Link>
-      <Link><a target="_blank" href="https://github.com/roberthdg"><Icon className="fab fa-2x fa-github"/></a></Link>
+      <GastbyLink to="/contact"><a><Icon style={{fontSize:'35px'}} className="fa fa-2x fa-envelope"/></a></GastbyLink>
+      <Link><a target="_blank" href="https://github.com/roberthdg"><Icon style={{fontSize:'32px'}} className="fab fa-2x fa-github"/></a></Link>
       <Link><a target="_blank" href="https://www.linkedin.com/in/roberthdg/"><Icon className="fab fa-2x fa-linkedin"/></a></Link>    
     </div>
 
@@ -57,7 +58,7 @@ const Content = () => {
 
     a{
       color: rgb(142,149,171);
-      padding: 10px;
+      padding: 12px;
     }
 
     a:hover{
