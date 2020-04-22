@@ -10,7 +10,6 @@ const projectsData = [
         name:'Fletes Ya',
         description:`All-in-one platform for shipment services. Calculate costs using Google Maps API, or create an auction 
         to get offers from dozens of carriers near your location, allowing you to choose the option that best suits your needs.`,
-        tools:['nodejs', 'express', 'jquery','bootstrap'],
         links:['https://fletesya.cl/', 'https://github.com/roberthdg/FletesYa-web-app']
     },
     {
@@ -18,7 +17,6 @@ const projectsData = [
         name: 'FIFA Ultimate Team Draft',
         description:`Single-page application developed with React/Redux, connected to a custom-built RESTful API. 
         Create the best possible football squad, select and swap players on the field to get the highest score.`,
-        tools:['nodejs', 'express', 'jquery','bootstrap'],
         links:['https://fifa-ultimate-team-draft.herokuapp.com/', 'https://github.com/roberthdg/FIFA-ultimate-team-draft-ReactJS']
     },
     {
@@ -26,8 +24,13 @@ const projectsData = [
         name:'Coinhub',
         description:`Web app designed with Material-UI. Multi-language support and light/dark themes enabled using React's Context API. 
         Monitor cryptocurrency prices and calculate costs in your local currency using up-to-date exchange rates.`,
-        tools:['nodejs', 'express', 'jquery','bootstrap'],
         links:['https://coinhub-react.herokuapp.com/', 'https://github.com/roberthdg/Coinhub-material-UI']
+    },
+    {
+        id:'yachana',
+        name:'Yachana Academy',
+        description:`Landing page for an online courses academy, built with Gatsby and designed with Material-UI. User messages and mail subscriptions enabled through an API created with Express and Nodemailer.`,
+        links:['https://yachana.netlify.app/', 'https://github.com/roberthdg/Yachana-online-courses']
     }
 ]
 
@@ -40,8 +43,8 @@ const Content = () => {
         setImgLoaded(false);
         //switch projects according to which arrow is clicked
         direction==='left' 
-        ? currentItem===0 ? setCurrentItem(2) : setCurrentItem((currentItem-1))
-        : currentItem===2 ? setCurrentItem(0) : setCurrentItem((currentItem+1))
+        ? currentItem===0 ? setCurrentItem(projectsData.length-1) : setCurrentItem((currentItem-1))
+        : currentItem===projectsData.length-1 ? setCurrentItem(0) : setCurrentItem((currentItem+1))
     }
 
     return(
