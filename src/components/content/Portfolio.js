@@ -10,7 +10,7 @@ const projectsData = [
         name:'Fletes Ya',
         description:`All-in-one platform for shipment services. Calculate costs using Google Maps API, or create an auction 
         to get offers from dozens of carriers near your location, allowing you to choose the option that best suits your needs.`,
-        links:['https://fletesya.cl/', 'https://github.com/roberthdg/FletesYa-web-app']
+        links:['https://fletesya.cl/', 'private']
     },
     {
         id:'futdraft',
@@ -30,7 +30,7 @@ const projectsData = [
         id:'yachana',
         name:'Yachana Academy',
         description:`Landing page for an online courses academy, built with Gatsby and designed with Material-UI. User messages and mail subscriptions enabled through an API created with Express and Nodemailer.`,
-        links:['https://yachana.netlify.app/', 'https://github.com/roberthdg/Yachana-online-courses']
+        links:['https://centrodecertificacion.com/', 'private']
     }
 ]
 
@@ -71,7 +71,9 @@ const Content = () => {
                             <span className='title'>{projectsData[currentItem].name}</span> <br/>
                             <span className='span mobile'><br/></span>
                             <span className='description'>{projectsData[currentItem].description}</span>  <br/> <br/>
-                            <a className='link' href={projectsData[currentItem].links[0]} target="_blank">Visit page</a> - <a className='link' href={projectsData[currentItem].links[1]} target="_blank">Go to Github</a>
+                            {projectsData[currentItem].links[1]==='private'
+                            ?<div><a className='link' href={projectsData[currentItem].links[0]} target="_blank">Visit page</a> </div>
+                            :<div><a className='link' href={projectsData[currentItem].links[0]} target="_blank">Visit page</a> - <a className='link' href={projectsData[currentItem].links[1]} target="_blank">Go to Github</a></div>}
                         </Typography>
                     </div>
                 </Grid>

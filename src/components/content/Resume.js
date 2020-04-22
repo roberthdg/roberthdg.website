@@ -29,6 +29,21 @@ const languages = [
   {language: 'Portuguese', description: 'Limited Working Proficiency'},
 ]
 
+const volunteering = [
+  {
+    year:'2020',
+    organization: 'UENSA Labs',
+    link:'https://github.com/UENSA-Labs',
+    position:'Collaborator'
+  },
+  {
+    year:'2017 - 2018',
+    organization: 'Decred Project',
+    link:'https://decred.org/es/',
+    position:'Translator / Brand Ambassador'
+  }
+]
+
 const Content = () => {
   return(
     <div className='content'>
@@ -112,23 +127,25 @@ const Content = () => {
       <PanToolOutlinedIcon style={iconStyle} /> 
       <Typography variant='h5' style={subtitleStyle}>Volunteering</Typography> 
       <div className='wrapper'>
+      {volunteering.map((item,i) => (
         <Grid container spacing={1}>
           <Grid container item xs={11} lg={2}>
             <div className='summary' />  
             <div className='year'>
-              <Typography variant='h6' style={{fontWeight: '400'}}> 2017 - 2018 </Typography>
+              <Typography variant='h6' style={{fontWeight: '400'}}> {item.year} </Typography>
             </div>
           </Grid>
           <Grid container item xs={11} lg={7} style={{marginLeft:'30px'}}>
             <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
-              Translator / Brand Ambassador
+              {item.position}
               <Typography variant='h6' style={{color:'white', fontWeight: '400'}}>
-                <a href='https://decred.org/es/' target='_blank' style={{textDecoration:'none', cursor:'pointer', color:'white'}}>Decred Project</a>
+                <a href={item.link} target='_blank' style={{textDecoration:'none', cursor:'pointer', color:'white'}}>{item.organization}</a>
               </Typography>   
               <br />
             </Typography> 
           </Grid>
         </Grid>
+      ))}
       </div>
   
     <style jsx>{`
