@@ -30,7 +30,7 @@ const projectsData = [
         id:'yachana',
         name:'Yachana Academy',
         description:`Landing page for an online courses academy, built with Gatsby and designed with Material-UI. User messages and mail subscriptions enabled through an API created with Express and Nodemailer.`,
-        links:['https://centrodecertificacion.com/', 'private']
+        links:['https://centrodecertificacion.com/', 'https://github.com/roberthdg/Yachana-online-courses']
     }
 ]
 
