@@ -59,7 +59,7 @@ const Content = () => {
                 <Typography variant='h6' style={{fontWeight: '400'}}> {item.year} </Typography>
               </div>
             </Grid>
-            <Grid container item xs={11} lg={7} style={{marginLeft: '30px'}}>
+            <Grid container item xs={11} lg={7}>
               <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
                 {item.title} 
                 <Typography variant='h6' style={{color:'white', fontWeight: '400'}}>{item.name}</Typography>
@@ -83,7 +83,7 @@ const Content = () => {
                 <Typography variant='h6' style={{fontWeight: '400'}}> {item.year} </Typography>
               </div>
             </Grid>
-            <Grid container item xs={11} lg={7} style={{marginLeft: '30px'}}>
+            <Grid container item xs={11} lg={7} >
               <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
                 {item.title} 
                 <Typography variant='h6' style={{color:'white', fontWeight: '400'}}>{item.name}</Typography>
@@ -109,11 +109,11 @@ const Content = () => {
                 <Typography variant='h6' style={{fontWeight: '400', color: 'white'}}> {item.language} </Typography>
               </div>
             </Grid>
-            <Grid container item xs={11} lg={7} style={{marginLeft: '30px'}}>
+            <Grid container item xs={11} lg={7}>
               <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
                 {item.description} 
                 {item.language==='English' 
-                ? <Typography variant='h6' style={{color:'rgb(164,172,185)', fontWeight: '300', marginBottom:'40px'}}><a href='https://www.efset.org/cert/YYfrui' target='_blank' className='link'>C2 Level (See EF Certificate).</a></Typography> 
+                ? <Typography variant='h6' style={{color:'rgb(164,172,185)', fontWeight: '300', marginBottom:'40px'}}><a href='https://www.efset.org/cert/YYfrui' target='_blank' rel="noopener noreferrer" className='link'>C2 Level (See EF Certificate).</a></Typography> 
                 : <div> <br/> <br/></div> 
                 }
               </Typography> 
@@ -136,10 +136,10 @@ const Content = () => {
             </div>
           </Grid>
           <Grid container item xs={11} lg={7}>
-            <Typography variant='h6' style={{color:'rgb(3,127,255)'}} style={{marginLeft: '30px'}}> 
+            <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
               {item.position}
               <Typography variant='h6' style={{color:'white', fontWeight: '400'}}>
-                <a href={item.link} target='_blank' style={{textDecoration:'none', cursor:'pointer', color:'white'}}>{item.organization}</a>
+                <a href={item.link} target='_blank' rel="noopener noreferrer" style={{textDecoration:'none', cursor:'pointer', color:'white'}}>{item.organization}</a>
               </Typography>   
               <br />
             </Typography> 
@@ -191,7 +191,7 @@ const Content = () => {
       }
 
       .year {
-        margin: 0 0 0 30px;
+        margin: 0 0 0 25px;
         color: rgb(164,172,185);
       }
 

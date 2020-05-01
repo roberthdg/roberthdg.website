@@ -1,4 +1,4 @@
-import React, { useState }  from 'react'
+import React, { useState, useEffect }  from 'react'
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
@@ -29,14 +29,18 @@ const Content = () => {
     const regexEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const classes = useStyles();
 
+    useEffect(() => {
+        document.getElementById('button').focus()
+    }, []);
+
     function sendMessage() {
         setDisplayAlert(false);
         
-        if(email=='' || message=='') {
+        if(email==='' || message==='') {
             setDisplayAlert(true);
             setAlertMessage(['warning', 'You must fill all required fields']);
         }
-        else if(regexEmail.test(email)==false) {
+        else if(regexEmail.test(email)===false) {
             setDisplayAlert(true);
             setAlertMessage(['warning','Please enter a valid email address']);
         }
@@ -105,7 +109,11 @@ const Content = () => {
                     }}
                 />
             </Grid>
-            <Grid item xs={12} ><Typography><a onClick={() => displayLoader? null: sendMessage()}> Send message </a></Typography></Grid>
+            <Grid item xs={12} >
+                <Typography>
+                    <span id='button' role='button' tabIndex='0' className='button' onClick={() => displayLoader? null: sendMessage()} onKeyDown={e => e.keyCode === 13? sendMessage() : null}> Send message </span>
+                </Typography>
+            </Grid>
             
             {displayAlert
             ? <Grid item xs={12} ><Alert onClose={() => setDisplayAlert(false)} severity={alertMessage[0]}> { alertMessage[1] } </Alert></Grid> 
@@ -114,7 +122,7 @@ const Content = () => {
         </Grid>
 
         <style jsx>{`
-            a {
+            .button {
                 left:1;
                 text-align:center;
                 text-transform: uppercase;
@@ -125,7 +133,7 @@ const Content = () => {
                 cursor:pointer;
             }
 
-            a:active {
+            .button:active {
                 padding: 13px;
             }
 

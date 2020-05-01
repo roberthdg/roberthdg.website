@@ -40,9 +40,9 @@ const Content = () => {
         Full-Stack Developer <br/>  React / Node.js / MongoDB  
       </Typography>
       
-      <GastbyLink to="/contact"><a><Icon style={{fontSize:'35px'}} className="fa fa-2x fa-envelope"/></a></GastbyLink>
-      <Link><a target="_blank" href="https://github.com/roberthdg"><Icon style={{fontSize:'32px'}} className="fab fa-2x fa-github"/></a></Link>
-      <Link><a target="_blank" href="https://www.linkedin.com/in/roberthdg/"><Icon className="fab fa-2x fa-linkedin"/></a></Link>    
+      <GastbyLink to="/contact"><span className='icon'><Icon style={{fontSize:'35px'}} className="fa fa-2x fa-envelope"/></span></GastbyLink>
+      <Link><a target="_blank" className='icon' href="https://github.com/roberthdg" rel="noopener noreferrer"><Icon style={{fontSize:'32px'}} className="fab fa-2x fa-github"/></a></Link>
+      <Link><a target="_blank" className='icon' href="https://www.linkedin.com/in/roberthdg/" rel="noopener noreferrer"><Icon className="fab fa-2x fa-linkedin"/></a></Link>    
     </div>
 
     <style jsx>{`
@@ -56,12 +56,12 @@ const Content = () => {
       vertical-align: middle;
     }
 
-    a{
+    .icon {
       color: rgb(142,149,171);
       padding: 12px;
     }
 
-    a:hover{
+    .icon :hover{
       color: rgb(3,127,255);
       cursor: pointer;
     }

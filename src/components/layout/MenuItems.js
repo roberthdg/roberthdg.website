@@ -27,7 +27,7 @@ const StyledLink = styled(Link)`
 
 const avatarStyle = {
   width:'120px', 
-  height:'120px',  
+  height:'120px', 
   marginLeft: '5px',
   border: '5px solid rgb(46,52,78)',
   marginTop: '25px',
