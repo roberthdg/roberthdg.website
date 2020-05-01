@@ -137,6 +137,10 @@ const Content = () => {
                 padding: 13px;
             }
 
+            .button:focus {
+                outline:none;
+            }
+
             .loader {
                 position: absolute;
                 z-index: 2;

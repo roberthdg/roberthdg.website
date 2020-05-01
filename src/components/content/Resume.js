@@ -59,7 +59,7 @@ const Content = () => {
                 <Typography variant='h6' style={{fontWeight: '400'}}> {item.year} </Typography>
               </div>
             </Grid>
-            <Grid container item xs={11} lg={7}>
+            <Grid container item xs={11} lg={7} style={{marginLeft:'25px'}}>
               <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
                 {item.title} 
                 <Typography variant='h6' style={{color:'white', fontWeight: '400'}}>{item.name}</Typography>
@@ -83,7 +83,7 @@ const Content = () => {
                 <Typography variant='h6' style={{fontWeight: '400'}}> {item.year} </Typography>
               </div>
             </Grid>
-            <Grid container item xs={11} lg={7} >
+            <Grid container item xs={11} lg={7} style={{marginLeft:'25px'}}>
               <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
                 {item.title} 
                 <Typography variant='h6' style={{color:'white', fontWeight: '400'}}>{item.name}</Typography>
@@ -109,7 +109,7 @@ const Content = () => {
                 <Typography variant='h6' style={{fontWeight: '400', color: 'white'}}> {item.language} </Typography>
               </div>
             </Grid>
-            <Grid container item xs={11} lg={7}>
+            <Grid container item xs={11} lg={7} style={{marginLeft:'25px'}}>
               <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
                 {item.description} 
                 {item.language==='English' 
@@ -135,7 +135,7 @@ const Content = () => {
               <Typography variant='h6' style={{fontWeight: '400'}}> {item.year} </Typography>
             </div>
           </Grid>
-          <Grid container item xs={11} lg={7}>
+          <Grid container item xs={11} lg={7} style={{marginLeft:'25px'}}>
             <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
               {item.position}
               <Typography variant='h6' style={{color:'white', fontWeight: '400'}}>
