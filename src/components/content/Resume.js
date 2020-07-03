@@ -45,6 +45,8 @@ const volunteering = [
   }
 ]
 
+const titleStyle = { color:'white', fontWeight: '400'}
+
 const Content = () => {
   return(
     <div className='content'>
@@ -63,7 +65,7 @@ const Content = () => {
             <Grid container item xs={11} lg={7} style={{marginLeft:'25px'}}>
               <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
                 {item.title} 
-                <Typography variant='h6' style={{color:'white', fontWeight: '400'}}>{item.name}</Typography>
+                <Typography variant='h6' style={titleStyle}>{item.name}</Typography>
                 <Typography variant='h6' style={{color:'rgb(164,172,185)', fontWeight: '300', marginBottom:'40px'}}>{item.description}</Typography> 
               </Typography> 
             </Grid>
@@ -87,7 +89,7 @@ const Content = () => {
             <Grid container item xs={11} lg={7} style={{marginLeft:'25px'}}>
               <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
                 {item.title} 
-                <Typography variant='h6' style={{color:'white', fontWeight: '400'}}>{item.name}</Typography>
+                <Typography variant='h6' style={titleStyle}>{item.name}</Typography>
                 {item.description!==''
                 ? <Typography variant='h6' style={{color:'rgb(164,172,185)', fontWeight: '300', marginBottom:'40px'}}><a href='/roberth-gomez-diploma.pdf' target='_blank' className='link'>{item.description}.</a></Typography> 
                 : <br /> }
@@ -107,7 +109,7 @@ const Content = () => {
             <Grid container item xs={11} lg={3}>
               <div className='summary' />  
               <div className='year'>
-                <Typography variant='h6' style={{fontWeight: '400', color: 'white'}}> {item.language} </Typography>
+                <Typography variant='h6' style={titleStyle}> {item.language} </Typography>
               </div>
             </Grid>
             <Grid container item xs={11} lg={7} style={{marginLeft:'25px'}}>
@@ -139,7 +141,7 @@ const Content = () => {
           <Grid container item xs={11} lg={7} style={{marginLeft:'25px'}}>
             <Typography variant='h6' style={{color:'rgb(3,127,255)'}}> 
               {item.position}
-              <Typography variant='h6' style={{color:'white', fontWeight: '400'}}>
+              <Typography variant='h6' style={titleStyle}>
                 <a href={item.link} target='_blank' rel="noopener noreferrer" style={{textDecoration:'none', cursor:'pointer', color:'white'}}>{item.organization}</a>
               </Typography>   
               <br />

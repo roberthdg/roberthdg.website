@@ -49,6 +49,12 @@ const Content = () => {
         font-size: 19px;
         margin-bottom: 30px;
       }
+      
+      @media screen and (max-width: 900px) {
+        a {
+          width: 300px;
+        }
+      }
 
       @media screen and (min-width: 1142px) {
         a {

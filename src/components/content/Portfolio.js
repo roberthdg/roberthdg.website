@@ -110,6 +110,8 @@ const Content = () => {
                 text-decoration:none;
                 color:white;
                 cursor: pointer;
+                font-size: 20px;
+                font-weight: 600;  
             }
             
             .link:hover {
