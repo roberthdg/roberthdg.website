@@ -6,13 +6,6 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 const projectsData = [
     {
-        id:'fletesya',
-        name:'Fletes Ya',
-        description:`All-in-one platform for shipment services. Calculate costs using Google Maps API, or create an auction 
-        to get offers from dozens of carriers near your location, allowing you to choose the option that best suits your needs.`,
-        links:['https://fletesya.cl/', 'private']
-    },
-    {
         id:'futdraft',
         name: 'FIFA Ultimate Team Draft',
         description:`Single-page application developed with React/Redux, connected to a custom-built RESTful API. 
