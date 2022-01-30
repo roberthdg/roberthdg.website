@@ -41,13 +41,13 @@ const Content = () => {
     <Title>Skills</Title>
     <Grid container spacing={1}>
       <Grid container item xs={12} spacing={1}>
-        {renderRows([{'JavaScript': 85}, {'HTML5/CSS3': 85}])}
+        {renderRows([{'JavaScript': 90}, {'HTML5/CSS3': 85}])}
       </Grid>
       <Grid container item xs={12} spacing={1}>
-        {renderRows([{'React': 77}, {'Redux': 70}])}
+        {renderRows([{'React': 85}, {'Redux': 80}])}
       </Grid>
       <Grid container item xs={12} spacing={1}>
-        {renderRows([{'Python': 80}, {'SQL/NoSQL': 78}])}
+        {renderRows([{'Python': 70}, {'SQL/NoSQL': 78}])}
       </Grid>
     </Grid>
     </>

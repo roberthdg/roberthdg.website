@@ -25,7 +25,7 @@ const Content = () => {
               <Grid item xs={7} >
                 <Typography variant='h6' style={{color:'white'}}>Phone</Typography>
                 <Typography style={{userSelect:'text'}}>
-                  +58 424 832 12 69 <br/>
+                  +57 314 227 09 41 <br/>
                 </Typography>
               </Grid>
             </Grid>
