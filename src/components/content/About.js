@@ -14,7 +14,7 @@ const Content = () => {
       <Grid container item xs={11} lg={6}>
         <span className='about'>
           Systems engineer from Venezuela with over 3 years of experience as a software developer, 
-          working on projects accross multiple platforms and programming languages.
+          working on projects across multiple platforms and programming languages.
         </span>
       </Grid>
       <Grid container item xs={6} lg={6}>
