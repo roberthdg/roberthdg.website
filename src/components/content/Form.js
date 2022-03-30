@@ -47,7 +47,7 @@ const Content = () => {
         else {
             setDisplayLoader(true);
             setDisableField(true);
-            fetch(`https://fletesya.cl/api/mail`, {
+            fetch(`https://api-nodemailer.herokuapp.com/api/mail`, {
                 headers:{
                     'Content-Type': 'application/json'
                   },
