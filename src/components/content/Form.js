@@ -49,8 +49,9 @@ const Content = () => {
             setDisableField(true);
             fetch(`https://api-nodemailer.herokuapp.com/api/mail`, {
                 headers:{
-                    'Content-Type': 'application/json'
-                  },
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*'
+                },
                 method:'POST',
                 body: JSON.stringify({mail: email, message: message})
             })
